@@ -1,17 +1,17 @@
-const { describe, it, before } = require('mocha');
+const { describe, it, before } = require("mocha");
 
-const { expect } = require('chai');
+const { expect } = require("chai");
 
-const WeirdMathService = require('../../../src/service/WeirdMathService');
+const WeirdMathService = require("../../../src/service/WeirdMathService");
 
-describe('WeirdMathService Suite Tests', () => {
+describe("WeirdMathService Suite Tests", () => {
   let service = {};
 
   before(() => {
     service = new WeirdMathService();
   });
 
-  it('should return expected value when doing math with a boolean and a number', () => {
+  it("should return expected value when doing math with a boolean and a number", () => {
     const a = true;
     const b = 5;
     const expected = 6;
@@ -20,17 +20,17 @@ describe('WeirdMathService Suite Tests', () => {
     expect(result).to.be.eql(expected);
   });
 
-  it('should return expected value when doing math with a string and a boolean', () => {
-    const a = '256';
+  it("should return expected value when doing math with a string and a boolean", () => {
+    const a = "256";
     const b = true;
-    const expected = '256true';
+    const expected = "256true";
 
     const result = service.getWeirdStringBooleanMath(a, b);
     expect(result).to.be.eql(expected);
   });
 
-  it('should return expected value when doing math with a string and a boolean | part 2', () => {
-    const a = '256';
+  it("should return expected value when doing math with a string and a boolean | part 2", () => {
+    const a = "256";
     const b = true;
     const expected = 255;
 
@@ -38,8 +38,8 @@ describe('WeirdMathService Suite Tests', () => {
     expect(result).to.be.deep.equal(expected);
   });
 
-  it('should return expected value when doing math with a string and a number', () => {
-    const a = '46';
+  it("should return expected value when doing math with a string and a number", () => {
+    const a = "46";
     const b = -1;
     const expected = 47;
 
@@ -47,8 +47,8 @@ describe('WeirdMathService Suite Tests', () => {
     expect(result).to.be.deep.equal(expected);
   });
 
-  it('should return expected value when doing math with a string and a number', () => {
-    const a = '46';
+  it("should return expected value when doing math with a string and a number", () => {
+    const a = "46";
     const b = false;
     const expected = 46;
 
